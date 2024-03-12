@@ -1,0 +1,1 @@
+export { Prestamos } from './Prestamos'
