@@ -1,10 +1,12 @@
+import Image from 'next/image'
 import styles from './IniciarSesion.module.sass'
 
 export const IniciarSesion = () => {
   return (
     <section className={`${styles.container} ${styles.forms}`}>
       <div className={`${styles.form} ${styles.login}`}>
-        <div className="form-content">
+        <div className={styles.form_content}>
+          <Image src="/images/logo-uv.jpg" alt="" width={100} height={140}/>
           <header className="">Iniciar Sesión</header>
           
           <form action="#">
