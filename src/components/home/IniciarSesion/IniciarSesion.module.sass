@@ -12,7 +12,9 @@
     border-radius: 6px
     background:  #ffff
     padding: 20px
-    @media screen and (max-width: 390px)
+    @media screen and (min-width: 360px)
+      width: 280px
+    @media screen and (min-width: 390px)
       width: 320px
     .form_content
       display: flex
@@ -42,8 +44,10 @@
             border-radius: 10px
             transition: all .3s ease
             padding: 0 15px
-            @media screen and (max-width: 390px)
-            width: 288px
+            @media screen and (min-width: 360px)
+              width: 244px
+            @media screen and (min-width: 390px)
+              width: 288px
           input:focus
             border-color: $color-profile
           label
