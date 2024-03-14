@@ -48,8 +48,10 @@
               width: 244px
             @media screen and (min-width: 390px)
               width: 288px
-          input:focus
-            border-color: $color-profile
+            &:focus
+              border: 2.5px solid 
+              border-color: $color-profile
+              outline: none
           label
             position: absolute
             cursor: text
@@ -82,9 +84,12 @@
           background-color: #FF4742
           background-position: 0 0
         .form_link
+          display: flex
           text-align: center
-          margin-top: 40px
+          justify-content: center
+
           a
+            padding: 10px
             text-decoration: none
             color: #232826
       

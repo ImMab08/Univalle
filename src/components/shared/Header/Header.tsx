@@ -24,7 +24,7 @@ export const Header = () => {
     }
   }
 
-  if(router === `/login`) {
+  if(router === `/auth/login` || router === `/auth/register`) {
     return null
   } else
   return (
@@ -45,7 +45,7 @@ export const Header = () => {
               </svg>
               <div className={styles.profileData}>
                 <p className={styles.profileData__dataName}>Franky Vargas</p>
-                <Link href="#" className={styles.profileData__dataWatch}>Ver perfil</Link>
+                <Link onClick={handleLinkClick} href="/profile" className={styles.profileData__dataWatch}>Ver perfil</Link>
               </div>
             </div>
             <svg

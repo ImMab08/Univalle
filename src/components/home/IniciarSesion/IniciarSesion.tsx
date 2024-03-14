@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import styles from './IniciarSesion.module.sass'
+import Link from 'next/link'
 
 export const IniciarSesion = () => {
   return (
@@ -26,6 +27,7 @@ export const IniciarSesion = () => {
 
             <div className={styles.form_link}>
               <a href="#" className={styles.forgot_pass}>Olvide mi contraseña</a>
+              <Link href="/auth/register" className={styles.forgot_pass}>Registrarme</Link>
             </div>
           </form>
         </div>
