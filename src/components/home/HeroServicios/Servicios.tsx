@@ -1,12 +1,12 @@
 import Link from "next/link"
-import styles from './Hero.module.sass'
+import styles from './Servicios.module.sass'
 
-export const Hero = () => {
+export const Servicios = () => {
   return (
     <section className={styles.hero}>
       <h1>Servicios</h1>
       <div className={styles.heroDiv}>
-        <Link className={styles.heroContainer} href="/beca-alimenticia">
+        <Link className={styles.heroContainer} href="/servicios/beca-alimenticia">
           <div className={styles.heroContainer__content}>
             <h3>Bono Alimenticio</h3>
             <div>
@@ -22,7 +22,7 @@ export const Hero = () => {
             </div>
           </div>
         </Link>
-        <Link className={styles.heroContainer} href="/prestamos-articulos">
+        <Link className={styles.heroContainer} href="/servicios/prestamos-articulos">
           <div className={styles.heroContainer__content}>
             <h3>Préstamos</h3>
             <div>
@@ -30,7 +30,7 @@ export const Hero = () => {
             </div>
           </div>
         </Link>
-        <Link className={styles.heroContainer} href="/pqrs">
+        <Link className={styles.heroContainer} href="/servicios/pqrs">
           <div className={styles.heroContainer__content}>
             <h3>PQRS</h3>
             <div>
@@ -38,7 +38,7 @@ export const Hero = () => {
             </div>
           </div>
         </Link>
-        <Link className={styles.heroContainer} href="">
+        <Link className={styles.heroContainer} href="/servicios">
           <div className={styles.heroContainer__content}>
             <h3>Bono Alimenticio</h3>
             <div>
@@ -54,7 +54,7 @@ export const Hero = () => {
             </div>
           </div>
         </Link>
-        <Link className={styles.heroContainer} href="">
+        <Link className={styles.heroContainer} href="/servicios">
           <div className={styles.heroContainer__content}>
             <h3>Bono Alimenticio</h3>
             <div>
@@ -71,8 +71,6 @@ export const Hero = () => {
           </div>
         </Link>
       </div>
-
-      
     </section>
   )
 }

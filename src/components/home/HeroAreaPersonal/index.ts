@@ -1,0 +1,1 @@
+export { AreaPersonal } from './ArePersonal'
