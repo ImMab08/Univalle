@@ -1,5 +1,6 @@
 'use client'
 import React, { useState } from 'react';
+import styles from './IA.module.sass'
 import { useSwipeable } from 'react-swipeable';
 
 export const CustomMenu = () => {
@@ -18,7 +19,7 @@ export const CustomMenu = () => {
   });
 
   return (
-    <div {...swipeHandlers}>
+    <div className={styles.content} {...swipeHandlers}>
       {/* Contenido de la aplicación */}
       <h1>Mi Aplicación</h1>
 
