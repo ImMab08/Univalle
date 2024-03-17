@@ -4,7 +4,6 @@ import { connectDB } from "@/libs/mongodb"
 import User from '@/models/user'
 
 export async function POST(request: Request) {
-
   const {code, email, password} = await request.json()
   console.log(code, email, password);
 
@@ -15,10 +14,20 @@ export async function POST(request: Request) {
   });
 
   try {
+    // throw new Error ('Not implemented')
     await connectDB()
-    const userFound = await User.findOne({email});
 
-    if (userFound) return NextResponse.json({
+    //verify code
+    const userFoundCode = await User.findOne({code});
+    if (userFoundCode) return NextResponse.json({
+      message: "Code already exist"
+    }, {
+      status: 409,
+    });
+        
+    //verify email
+    const userFoundEmail = await User.findOne({email});
+    if (userFoundEmail) return NextResponse.json({
       message: "Email already exist"
     }, {
       status: 409,
@@ -33,11 +42,20 @@ export async function POST(request: Request) {
     });
   
     const savedUser = await user.save();
-    console.log(savedUser);
   
-    return NextResponse.json(savedUser);
+    return NextResponse.json({
+      _id: savedUser._id,
+      code: savedUser.code,
+      email: savedUser.email
+    });
   } catch (error) {
     console.log(error)
-    return NextResponse.error();
+    if (error instanceof Error) {
+      return NextResponse.json({
+        message: error.message
+      }, {
+        status: 400
+      });
+    }
   }
 }

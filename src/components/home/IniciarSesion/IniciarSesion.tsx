@@ -14,7 +14,6 @@ export const IniciarSesion = () => {
             <div className={`${styles.field} ${styles.input_field}`}>
               <input type="text" required className={styles.input}/>
               <label htmlFor="password">Código</label>
-
             </div>
             <div className={`${styles.field} ${styles.input_field}`}>
               <input type="password" autoComplete='off' required className={styles.password}/>

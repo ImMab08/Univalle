@@ -8,16 +8,16 @@ const userScheme = new Schema({
     match: [
       /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
       'Please fill a valid email address',
-    ]
+    ],
   },
   password: {
     type: String,
     require: [true, 'Password is required'],
-    select: false
+    select: false,
   },
   code: {
     type: Number,
-    require: [true, 'Code is required']
+    require: [true, 'Code is required'],
   },
 });
 
