@@ -3,7 +3,6 @@ import { useForm } from 'react-hook-form'
 import { useRouter } from 'next/navigation'
 import { FormEvent, useState } from 'react'
 
-import styles from './RegistrarSesion.module.sass'
 import Image from 'next/image'
 import Link from 'next/link'
 import axios, { AxiosError} from 'axios'
@@ -29,42 +28,42 @@ export const RegistrarSesion = () => {
     }
   }
   return (
-    <section className={`${styles.container} ${styles.forms}`}>
-      <div className={`${styles.form} ${styles.login}`}>
-        <div className={styles.form_content}>
+    <section className="{`${styles.container} ${styles.forms}`}">
+      <div className="{`${styles.form} ${styles.login}`}">
+        <div className="{styles.form_content}">
           <Image src="/images/logo-uv.jpg" alt="" width={100} height={140}/>
           <header className="">Registro</header>
           
           <form onSubmit={handleSubmit}>
-            {error && <div className={styles.error}>{error}</div>}
-            <div className={`${styles.field} ${styles.input_field}`}>
+            {error && <div className="{styles.error}">{error}</div>}
+            <div className="{`${styles.field} ${styles.input_field}`}">
               <input 
                 type="text" 
                 name='code' 
-                className={styles.input}/>
+                className="{styles.input}"/>
               <label htmlFor="text">Código</label>
             </div>
 
-            <div className={`${styles.field} ${styles.input_field}`}>
+            <div className="{`${styles.field} ${styles.input_field}`}">
               <input 
                 type="email"
                 name='email' 
-                className={styles.input} />
+                className="{styles.input}" />
               <label htmlFor="email">Email</label>
             </div>
 
-            <div className={`${styles.field} ${styles.input_field}`}>
+            <div className="{`${styles.field} ${styles.input_field}`}">
               <input 
                 type="password" 
                 name='password'
                 autoComplete='off' 
-                className={styles.password}/>
+                className="{styles.password}"/>
               <label htmlFor="password">Password</label>
             </div>
 
-            <button type='submit' className={`${styles.field} ${styles.button_field}`}>Registrarme</button>
-            <div className={styles.form_link}>
-              <Link href="/auth/login" className={styles.forgot_pass}>Iniciar Sesion</Link>
+            <button type='submit' className="{`${styles.field} ${styles.button_field}`}">Registrarme</button>
+            <div className="{styles.form_link}">
+              <Link href="/auth/login" className="{styles.forgot_pass}">Iniciar Sesion</Link>
             </div>
           </form>
         </div>

@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Header } from "@/components/shared/Header";
-import { CustomMenu } from "@/components/shared/IA"
-import '@/sass/globals.sass';
+import '@/app/globals.css'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +19,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Header />
-        <CustomMenu />
         {children}
       </body>
     </html>
